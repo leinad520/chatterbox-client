@@ -7,7 +7,7 @@ var MessagesView = {
   },
 
   render: function(messagesArr) {
-/*
+  /*
     for (var i = 0; i < messagesArr.length; i++) {
       if (messagesArr[i].username !== undefined) {
         renderMessage(messagesArr[i]);

@@ -27,7 +27,7 @@ var RoomsView = {
     $select.append($('<option>', {
       value: roomName,
       text: roomName
-  }));
+    }));
 
 
   },
