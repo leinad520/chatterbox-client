@@ -9,8 +9,16 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
-    console.log('click!');
+    //console.log($('input#message').val());
+
+    var Messages = {
+      username: 'troll',
+      text: 'can\'t touch me dananana',
+      roomname: '4chan'
+  
+  };
+    Parse.create(Messages);
+
   },
 
   setStatus: function(active) {
