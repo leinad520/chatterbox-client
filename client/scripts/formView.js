@@ -11,7 +11,6 @@ var FormView = {
     event.preventDefault();
     //console.log($('input#message').val());
     var location = window.location.search;
-    console.log(location);
     var msg = $('input#message').val();
     const urlParams = new URLSearchParams(window.location.search);
     // const myParam = urlParams.get('myParam');
