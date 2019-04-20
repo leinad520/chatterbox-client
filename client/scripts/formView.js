@@ -21,7 +21,7 @@ var FormView = {
       text: msg,
       roomname: '4chan'
   
-  };
+    };
     Parse.create(Messages);
 
   },

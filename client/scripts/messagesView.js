@@ -24,22 +24,6 @@ var MessagesView = {
         $('#chats').append(html);
       }
     }
-    //$('#chats').append(html);
-
-
-      /*
-      var msg = messagesArr[i];
-      var user = msg.username;
-      var text = msg.text;
-      var roomName = msg.roomname;
-      var message = `<div>${user}: ${text}</div>`;
-      */
-
-      /*var i, html = "";
-      for (i = 0; i < data.movies.length; i++) {
-        html += compiled(data.movies[i]);
-      }  
-      $("#movies").append(html);*/
   }
 
 
