@@ -9,19 +9,31 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    //console.log($('input#message').val());
-    var location = window.location.search;
-    var msg = $('input#message').val();
-    const urlParams = new URLSearchParams(window.location.search);
+    
+    //const urlParams = new URLSearchParams(window.location.search);
     // const myParam = urlParams.get('myParam');
-
-    var Messages = {
-      username: urlParams.get('username'),
-      text: msg,
-      roomname: '4chan'
+    
+    
+    var msg = $('input#message').val();
+    //roomName get current selected roomname
+    var roomname = $('#rooms select option:selected').val();
+    console.log(roomname);
+ 
+    var username = App.username;
   
+
+    var messages = {
+      username: username,
+      text: msg,
+      roomname: roomname
     };
-    Parse.create(Messages);
+    
+    $('input#message').val('');
+    App.startSpinner();
+    Parse.create(messages, App.fetch);
+    App.stopSpinner();
+    //$('input#message').val() = '';
+    
 
   },
 

@@ -9,6 +9,16 @@ var MessagesView = {
   render: function() {
     
     
+    $('#chats').empty();
+    for (let i = 0; i < Messages.length; i++) {
+      var message = Messages[i];
+      if (message.username && message.text && message.roomname === roomname) {
+        var html = MessageView.render(message);
+        $('#chats').append(html);
+    }
+  }
+    
+    
   /*
     for (var i = 0; i < messagesArr.length; i++) {
       if (messagesArr[i].username !== undefined) {
@@ -26,11 +36,13 @@ var MessagesView = {
   */
   renderMessage: function(messagesArr) {
     //var html = "";
+    $('#chats').empty();
     for (var i = 0; i < messagesArr.length; i++) {
   
       var username = messagesArr[i].username;
       var text = messagesArr[i].text;
-      if (username !== undefined && text !== undefined ) {
+      var roomname = messagesArr[i].roomname;
+      if (username && text && roomname) {
         var html = MessageView.render(messagesArr[i]);
         $('#chats').append(html);
       }

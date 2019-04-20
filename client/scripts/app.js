@@ -21,14 +21,12 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-      Messages = data;
-      console.log(Messages);
-
+      Messages = data.results;
+      RoomsView.renderRoom();
+      
       //pass array of message to renderMessage
-      MessagesView.renderMessage(data.results);
-      
-      //pass in message array to roomsview and create all rooms
-      
+      MessagesView.renderMessage(Messages);
+      //pass in message array to roomsview and create all rooms      
 
       callback();
     });
