@@ -14,8 +14,10 @@ body {
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
-    background: url(https://media.giphy.com/media/Y0cKnGMCBTNTi/giphy.gif);
+    /* background: url(https://media.giphy.com/media/Y0cKnGMCBTNTi/giphy.gif);
+    */
 }
+
 
 #main h1 {
     margin-top: 0;
@@ -66,7 +68,7 @@ form input[type=text] {
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: black;
+    background-color: rgba(52, 50, 50, 0.29);
 }
 
 .chat .username {
@@ -77,16 +79,6 @@ form input[type=text] {
 
 }
 
-.chat:hover {
-    background-color: ;
-    
-}
-
-.chat .text {
-    color: green;
-    font-family: 'Orbitron', sans-serif;
-
-}
 
 .chat .time {
     color: green;
@@ -114,14 +106,36 @@ form input[type=text] {
     color: green;
     background-color: black;
     font-family: 'Orbitron', sans-serif;
+    font-size: 85%;
+
 
 }
 
 .chat:hover {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.598);
 }
 
 .chat .text {
     color: black;
+    font-family: 'Orbitron', sans-serif;
 }
 
+#rooms button {
+    color: green;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 85%;
+}
+
+#rooms select {
+    background-color: rgba(52, 50, 50, 0.29);
+    color: rgb(42, 220, 6);
+    height: 20px;
+}
+
+#message {
+    background-color: rgba(52, 50, 50, 0.29);
+    color: rgb(42, 220, 6);
+    font-family: 'Obitron', sans-serif;
+    border-radius: 10%
+}
