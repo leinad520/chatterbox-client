@@ -8,7 +8,7 @@ var MessageView = {
         <div class="text">
           <%- text %>
         </div>
-        <div class ="roomName" style="color:blue; font-size: 85%">
+        <div class ="roomName" style="color:green; font-size: 85%">
          <i><br><%- roomname %><br></i>
         </div>
         <div class="time"> 
