@@ -17,9 +17,9 @@ var FormView = {
     var msg = $('input#message').val();
     //roomName get current selected roomname
     var roomname = $('#rooms select option:selected').val();
-    console.log(roomname);
  
     var username = App.username;
+    
   
 
     var messages = {
@@ -34,6 +34,8 @@ var FormView = {
     App.stopSpinner();
     //$('input#message').val() = '';
     
+    App.roomname = roomname;
+
 
   },
 

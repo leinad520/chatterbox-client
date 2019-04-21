@@ -18,6 +18,8 @@ var RoomsView = {
   renderRoom: function() {
   //loops through all messages and find all the existing rooms. Puts those rooms into the Rooms object in rooms.js
   this.$select.empty();
+  
+  
   for (var i = 0; i<Messages.length; i++) {
     var message = Messages[i];
     //console.log(message);
@@ -34,6 +36,8 @@ var RoomsView = {
   for (let roomName in Rooms) {
     RoomsView.$select.append($('<option>', {value: roomName, text: roomName}));
   }
+  
+  //$('#rooms select option:selected').val(App.rooname);
   
   //if selected option gets changed filter messsage with for room selected
   
@@ -57,6 +61,7 @@ var RoomsView = {
   //create a handle select function that filters the message with room selected
   changeRoom: function() {
     var chosenRoom = $('#rooms select option:selected').val();
+    App.roomname = chosenRoom;
     $('#chats').empty();
     for (let i = 0; i < Messages.length; i++) {
       var message = Messages[i];
@@ -65,6 +70,7 @@ var RoomsView = {
         $('#chats').append(html);
     }
   }
+  
 },
   
 

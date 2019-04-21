@@ -3,6 +3,8 @@ var App = {
   $spinner: $('.spinner img'),
 
   username: 'anonymous',
+  
+  roomname: 'No room',
 
   initialize: function() {
     App.username = window.location.search.substr(10);
@@ -22,11 +24,12 @@ var App = {
       // examine the response from the server request:
       console.log(data);
       Messages = data.results;
-      RoomsView.renderRoom();
-      
+      // let temp = $('#rooms select option:selected').val();
+      RoomsView.renderRoom();  
+      // $('#rooms select option:selected').change(temp);   
       //pass array of message to renderMessage
       MessagesView.renderMessage(Messages);
-      //pass in message array to roomsview and create all rooms      
+      //pass in message array to roomsview and create all rooms 
 
       callback();
     });
